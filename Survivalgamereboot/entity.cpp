@@ -28,10 +28,18 @@ void Entity::LOSE_HEALTH(int HP_LOSED)
     current_health = current_health - HP_LOSED;
     if(DEAD() == true)
         //TO DO: add drop items func
-       
-    is_dead = DEAD();
+        
+        is_dead = DEAD();
 }
 int Entity::outPut_damage()
 {
     return damage;
+}
+int Entity::output_cur_HP()
+{
+    return current_health;
+}
+int Entity::output_max_HP()
+{
+    return max_health;
 }

@@ -1,6 +1,7 @@
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
 #include <iostream>
+#include <cstring>
 using namespace std;
 class Entity
 {
@@ -10,6 +11,7 @@ private:
     
 protected:
     int max_health, damage, current_health;
+    string name;
     
     
     /*
@@ -23,9 +25,13 @@ protected:
      */
     
 public:
-    //HP stands for Health points
+    
+    
     int outPut_damage();
-    Entity(const int inpHealth, const int inpdamage);
+    //HP stands for Health points
+    Entity(const int HP, const int inpdamage);
+    int output_cur_HP();
+        int output_max_HP();
     void ADD_HEALTH(int HP_GAINED);
     void LOSE_HEALTH(int HP_LOSED);
     bool is_dead = false;
